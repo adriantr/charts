@@ -15,6 +15,9 @@ The following table lists the configurable parameters of the chart and their def
 
 | Parameter	| Description |	Default |
 | ----------- | ----------- | ----------- |
+| config.storageProvider | Storage provider | "" |
+| config.storagePath | Storage path | "" |
+| config.turboToken | Turbo token | "" |
 | image.repository	| The image repository	myregistry/| mychart
 | image.tag	| The image tag	| latest
 | image.pullPolicy |The image pull policy |	IfNotPresent
