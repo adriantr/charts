@@ -45,7 +45,16 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-
+          env:
+            - name: STORAGE_PROVIDER
+              value: {{ .Values.config.storageProvider }}
+            - name: STORAGE_PATH
+              value: {{ .Values.config.storagePath }}
+            - name: TURBO_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "turborepo-remote-cache.fullname" . }}
+                  key: token
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
