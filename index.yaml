@@ -3,12 +3,12 @@ entries:
   turborepo-remote-cache:
   - apiVersion: v2
     appVersion: 1.10.1
-    created: "2023-01-10T13:42:40.080895+01:00"
+    created: "2023-01-10T13:49:46.220611+01:00"
     description: Turborepo remote cache helm chart
-    digest: abe8c59d573da593da058f0e895c3e2b779a9db16a539ea28f563da044bd78fa
+    digest: d071ef45f075b7c08251ff56897ae614a784a20529a1fbc585439e4e7c3c673d
     name: turborepo-remote-cache
     type: application
     urls:
-    - turborepo-remote-cache-1.0.1.tgz
-    version: 1.0.1
-generated: "2023-01-10T13:42:40.079722+01:00"
+    - turborepo-remote-cache-1.0.2.tgz
+    version: 1.0.2
+generated: "2023-01-10T13:49:46.219448+01:00"
