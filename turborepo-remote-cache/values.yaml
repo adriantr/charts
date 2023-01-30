@@ -14,9 +14,12 @@ nameOverride: ""
 fullnameOverride: ""
 
 config:
+  turboToken: ""
+  logLevel: "debug"
   storageProvider: "local"
   storagePath: "/tmp/turborepo"
-  turboToken: ""
+  storagePathUseTmpFolder: true
+  bodyLimit: 104857600
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -43,7 +46,7 @@ securityContext:
   # capabilities:
   #   drop:
   #   - ALL
-  # readOnlyRootFilesystem: true
+# readOnlyRootFilesystem: true
 # runAsNonRoot: true
 # runAsUser: 1000
 
