@@ -29,7 +29,7 @@ serviceAccount:
 
 pvc:
   create: true
-  storageClassName: "nginx-internal"
+  storageClassName: "ebs-sc"
   storageSize: "50Gi"
 
 podAnnotations: { }
