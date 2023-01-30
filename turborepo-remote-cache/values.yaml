@@ -34,6 +34,8 @@ pvc:
   create: true
   storageClassName: "efs-sc"
   storageSize: "50Gi"
+  accessModes:
+    - ReadWriteMany
 
 podAnnotations: { }
 
