@@ -3,9 +3,9 @@ entries:
   turborepo-remote-cache:
   - apiVersion: v2
     appVersion: 1.10.2
-    created: "2023-01-30T18:43:48.8975221Z"
+    created: "2023-01-30T18:48:41.980325702Z"
     description: Turborepo remote cache helm chart
-    digest: 316b03e7c9231d4377300aa650910a6e7ab26b4d490fb78a73058e0b593f3ec9
+    digest: 353a7dab1c69dc5bd18ae7f58f5d9627e24ed8f4497fadb9bad347b5b6e51123
     name: turborepo-remote-cache
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 1.1.1-pvc
   - apiVersion: v2
     appVersion: 1.10.2
-    created: "2023-01-30T18:43:48.897120546Z"
+    created: "2023-01-30T18:48:41.979938815Z"
     description: Turborepo remote cache helm chart
     digest: 24f32bb0cd478078569c62c08a2b5abcf8468a09b02556e7cd362aff82a7f5f1
     name: turborepo-remote-cache
@@ -23,7 +23,7 @@ entries:
     version: 1.1.0-pvc
   - apiVersion: v2
     appVersion: 1.10.1
-    created: "2023-01-30T18:43:48.896725063Z"
+    created: "2023-01-30T18:48:41.979570785Z"
     description: Turborepo remote cache helm chart
     digest: d071ef45f075b7c08251ff56897ae614a784a20529a1fbc585439e4e7c3c673d
     name: turborepo-remote-cache
@@ -33,7 +33,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: 1.10.2
-    created: "2023-01-30T18:43:48.89635573Z"
+    created: "2023-01-30T18:48:41.979229504Z"
     description: Turborepo remote cache helm chart
     digest: 2f2a4b17a929cf4369a564c660a4faba7232d9dfd2797316cf320d89d3c314ab
     name: turborepo-remote-cache
@@ -41,4 +41,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/tractableai/turborepo-remote-cache-tractable/main/turborepo-remote-cache-1.0.2-pvc.tgz
     version: 1.0.2-pvc
-generated: "2023-01-30T18:43:48.895859999Z"
+generated: "2023-01-30T18:48:41.978757859Z"
