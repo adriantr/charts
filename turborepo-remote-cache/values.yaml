@@ -18,7 +18,7 @@ config:
   logLevel: "debug"
   storageProvider: "local"
   storagePath: "/tmp/turborepo"
-  storagePathUseTmpFolder: true
+  storagePathUseTmpFolder: "true"
   bodyLimit: 104857600
 
 serviceAccount:
