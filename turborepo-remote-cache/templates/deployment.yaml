@@ -22,11 +22,18 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      volumes:
+        - name: turborepo-remote-cache
+          hostPath:
+            path: /tmp/turborepo
       serviceAccountName: {{ include "turborepo-remote-cache.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
+          volumeMounts:
+            - mountPath: "/tmp/turborepo"
+              name: turborepo-remote-cache
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
