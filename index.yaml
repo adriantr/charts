@@ -10,5 +10,5 @@ entries:
     type: application
     urls:
     - turborepo-remote-cache-1.0.2.tgz
-    version: 1.0.2
+    version: 1.0.2-pvc
 generated: "2023-01-10T13:49:46.219448+01:00"
