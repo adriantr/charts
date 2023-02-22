@@ -2,53 +2,23 @@ apiVersion: v1
 entries:
   turborepo-remote-cache:
   - apiVersion: v2
-    appVersion: 1.10.2
-    created: "2023-01-30T19:45:17.664212516Z"
+    appVersion: 1.13.1
+    created: "2023-02-22T19:00:13.803661045Z"
     description: Turborepo remote cache helm chart
-    digest: 4334c09b90571128358589b17d7c31737e080e625bf6693deb4c577dd3cc20a4
+    digest: 6b89382ac40f69a65f5bb8ea82efb47f9001dc4921524f9a81ac7bf5cd0f5a11
     name: turborepo-remote-cache
     type: application
     urls:
-    - https://raw.githubusercontent.com/tractableai/turborepo-remote-cache-tractable/main/turborepo-remote-cache-1.1.2-pvc.tgz
-    version: 1.1.2-pvc
-  - apiVersion: v2
-    appVersion: 1.10.2
-    created: "2023-01-30T19:45:17.66364975Z"
-    description: Turborepo remote cache helm chart
-    digest: 353a7dab1c69dc5bd18ae7f58f5d9627e24ed8f4497fadb9bad347b5b6e51123
-    name: turborepo-remote-cache
-    type: application
-    urls:
-    - https://raw.githubusercontent.com/tractableai/turborepo-remote-cache-tractable/main/turborepo-remote-cache-1.1.1-pvc.tgz
-    version: 1.1.1-pvc
-  - apiVersion: v2
-    appVersion: 1.10.2
-    created: "2023-01-30T19:45:17.663097904Z"
-    description: Turborepo remote cache helm chart
-    digest: 24f32bb0cd478078569c62c08a2b5abcf8468a09b02556e7cd362aff82a7f5f1
-    name: turborepo-remote-cache
-    type: application
-    urls:
-    - https://raw.githubusercontent.com/tractableai/turborepo-remote-cache-tractable/main/turborepo-remote-cache-1.1.0-pvc.tgz
-    version: 1.1.0-pvc
+    - turborepo-remote-cache-1.1.0.tgz
+    version: 1.1.0
   - apiVersion: v2
     appVersion: 1.10.1
-    created: "2023-01-30T19:45:17.662555526Z"
+    created: "2023-02-22T19:00:13.803325936Z"
     description: Turborepo remote cache helm chart
     digest: d071ef45f075b7c08251ff56897ae614a784a20529a1fbc585439e4e7c3c673d
     name: turborepo-remote-cache
     type: application
     urls:
-    - https://raw.githubusercontent.com/tractableai/turborepo-remote-cache-tractable/main/turborepo-remote-cache-1.0.2.tgz
+    - turborepo-remote-cache-1.0.2.tgz
     version: 1.0.2
-  - apiVersion: v2
-    appVersion: 1.10.2
-    created: "2023-01-30T19:45:17.662068281Z"
-    description: Turborepo remote cache helm chart
-    digest: 2f2a4b17a929cf4369a564c660a4faba7232d9dfd2797316cf320d89d3c314ab
-    name: turborepo-remote-cache
-    type: application
-    urls:
-    - https://raw.githubusercontent.com/tractableai/turborepo-remote-cache-tractable/main/turborepo-remote-cache-1.0.2-pvc.tgz
-    version: 1.0.2-pvc
-generated: "2023-01-30T19:45:17.661384157Z"
+generated: "2023-02-22T19:00:13.80290139Z"
