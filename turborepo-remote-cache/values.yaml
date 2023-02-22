@@ -31,11 +31,11 @@ serviceAccount:
   name: ""
 
 pvc:
-  create: true
-  storageClassName: "efs-sc"
+  create: false
+  storageClassName: ""
   storageSize: "50Gi"
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
 
 podAnnotations: {}
 
