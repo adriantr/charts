@@ -2,7 +2,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: turborepo-remote-cache
+  name: {{ include "turborepo-remote-cache.fullname" . }}
 spec:
   storageClassName: {{ .Values.pvc.storageClassName }}
   accessModes:
