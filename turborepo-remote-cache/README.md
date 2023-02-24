@@ -1,6 +1,7 @@
 # Chart for turborepo-remote-cache
 
-This project is an open-source implementation of the Turborepo custom remote cache server. If Vercel’s official cache server isn’t a viable option, this server is an alternative for self-hosted deployments. It supports several storage providers and deploys environments. Moreover, the project provides “deploy to “ buttons for one-click deployments whenever possible.
+This project is an open-source implementation of the Turborepo custom remote cache server. If Vercel’s official cache server isn’t a viable option, this server is an alternative for self-hosted
+deployments. It supports several storage providers and deploys environments. Moreover, the project provides “deploy to “ buttons for one-click deployments whenever possible.
 
 ## Installation
 
@@ -11,24 +12,30 @@ $ helm install --name my-release .
 ```
 
 ## Configuration
+
 The following table lists the configurable parameters of the chart and their default values.
 
-| Parameter	| Description |	Default |
-| ----------- | ----------- | ----------- |
-| config.storageProvider | Storage provider | "" |
-| config.storagePath | Storage path | "" |
-| config.turboToken | Turbo token | "" |
-| image.repository	| The image repository	myregistry/| mychart
-| image.tag	| The image tag	| latest
-| image.pullPolicy |The image pull policy |	IfNotPresent
-| service.type |	The type of service to create	| ClusterIP
-| service.port|	The port to expose|	80
-| replicaCount	|The number of replicas|	1
-| ingress.enabled|	Enable ingress	|false
-| ingress.annotations|	ingress annotations|	{}
-| ingress.path|	ingress path	|/
-| ingress.hosts|	ingress hosts|	[]
-| ingress.tls|	ingress tls|	[]
+| Parameter              | Description                                                                | Default       |
+|------------------------|----------------------------------------------------------------------------|---------------|
+| config.storageProvider | Storage provider. Set to local if pvc enabled.                             | ""            |
+| config.storagePath     | Storage path                                                               | ""            |
+| config.turboToken      | Turbo token                                                                | ""            |
+| image.repository       | The image repository myregistry/                                           | mychart       |
+| image.tag              | The image tag                                                              | latest        |
+| image.pullPolicy       | The image pull policy                                                      | IfNotPresent  |
+| service.type           | The type of service to create                                              | ClusterIP     |
+| service.port           | The port to expose                                                         | 80            |
+| replicaCount           | The number of replicas                                                     | 1             |
+| ingress.enabled        | Enable ingress                                                             | false         |
+| ingress.annotations    | ingress annotations                                                        | {}            |
+| ingress.path           | ingress path                                                               | /             |
+| ingress.hosts          | ingress hosts                                                              | []            |
+| ingress.tls            | ingress tls                                                                | []            |
+| pvc.create             | Creates a Persistent Volume Claim                                          | false         |
+| pvc.storageClassName   | Storage class name of enabled classes (e.g. gp2 on AWS or standard on GKE) | ""            |
+| pvc.storageSize        | Requested size of the underlying filesystem in the volume.                 | 50Gi          |
+| pvc.accessModes        | List of PVC access modes for the volume                                    | ReadWriteOnce |
+
 Specify each parameter using the --set key=value[,key=value] argument to helm install.
 
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
@@ -36,9 +43,11 @@ Alternatively, a YAML file that specifies the values for the parameters can be p
 ```
 $ helm install --name my-release -f values.yaml .
 ```
+
 Tip: You can use the default values.yaml
 
 ## Values overwriting priority
+
 ```
 command line options
 --values options
@@ -46,6 +55,7 @@ command line options
 values.yaml in chart
 default values
 ```
+
 It's a basic template you can start with and edit according to your use case. Also, it gives an idea on how to use `values.yaml`, `--set`,`--set-file` to customize the chart.
 
 Please let me know if you want further customizations or if you have any question about above example.

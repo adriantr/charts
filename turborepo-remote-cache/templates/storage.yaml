@@ -1,0 +1,15 @@
+{{- if .Values.pvc.create -}}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ include "turborepo-remote-cache.fullname" . }}
+spec:
+  storageClassName: {{ .Values.pvc.storageClassName }}
+  accessModes:
+    {{- range .Values.pvc.accessModes }}
+    - {{.}}
+    {{- end }}
+  resources:
+    requests:
+      storage: {{ .Values.pvc.storageSize }}
+{{- end }}
