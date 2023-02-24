@@ -24,9 +24,9 @@ spec:
       {{- end }}
       {{- if .Values.pvc.create -}}
       volumes:
-        - name: turborepo-remote-cache
-          hostPath:
-            path: /tmp/turborepo
+        - name: {{ include "turborepo-remote-cache.fullname" . }}
+          persistentVolumeClaim:
+            claimName: {{ include "turborepo-remote-cache.fullname" . }}
       {{- end }}
       serviceAccountName: {{ include "turborepo-remote-cache.serviceAccountName" . }}
       securityContext:
@@ -36,7 +36,7 @@ spec:
           {{- if .Values.pvc.create -}}
           volumeMounts:
             - mountPath: "/tmp/turborepo"
-              name: turborepo-remote-cache
+              name: {{ include "turborepo-remote-cache.fullname" . }}
           {{- end }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
