@@ -47,6 +47,13 @@ spec:
                 secretKeyRef:
                   name: {{ include "turborepo-remote-cache.fullname" . }}
                   key: token
+          livenessProbe:
+            httpGet:
+              path: /v8/artifacts/status
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 5
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
